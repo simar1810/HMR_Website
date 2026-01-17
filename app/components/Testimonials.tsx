@@ -7,7 +7,7 @@ import { Quote } from 'lucide-react';
 const Testimonials = () => {
     return (
         <section className="relative w-full py-24 overflow-hidden">
-            {/* Background Image with Green Overlay */}
+            
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/testimonial-bg.png"
@@ -21,7 +21,7 @@ const Testimonials = () => {
             </div>
 
             <div className="container mx-auto px-4 md:px-8 relative z-10">
-                {/* Header */}
+                
                 <div className="mb-16">
                     <div className="flex items-center gap-2 mb-4">
                         <div className="w-3 h-3 rounded-full bg-red-600 "></div>
@@ -36,14 +36,14 @@ const Testimonials = () => {
                     </h2>
                 </div>
 
-                {/* Glassmorphism Card */}
+                
                 <div className="bg-[#1a472a]/40 backdrop-blur-sm rounded-[2.5rem] border border-white/10 overflow-hidden shadow-2xl max-w-6xl mx-auto">
                     <div className="grid grid-cols-1 lg:grid-cols-2">
-                        {/* Left Side: Testimonial content */}
+                        
                         <div className="p-12 flex flex-col justify-center relative">
-                            {/* Logo/Icon */}
+                            
                             <div className="mb-8 relative w-24 h-12">
-                                {/* Using a placeholder icon/text for the logo in the image */}
+                                
                                 <div className="relative w-24 h-12">
                                     <Image
                                         src="/ipsum.png"
@@ -65,7 +65,7 @@ const Testimonials = () => {
                             </div>
                         </div>
 
-                        {/* Right Side: Image */}
+                        
                         <div className="relative h-[400px] lg:h-[500px] p-10 py-2 md:py-20">
                             <div className="relative w-full h-full rounded-[2rem] overflow-hidden">
                                 <Image

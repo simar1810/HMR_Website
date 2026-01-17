@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="container mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
-                    {/* Column 1: Logo & Contact */}
+                    
                     <div className="space-y-6">
                         <div className="relative w-32 h-16">
                             <Image
@@ -35,7 +35,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Column 2: Quick Links */}
+                    
                     <div>
                         <h3 className="text-xl font-bold mb-6">Quick Links</h3>
                         <ul className="space-y-4 text-sm text-gray-100">
@@ -48,7 +48,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 3: Featured Links */}
+                   
                     <div>
                         <h3 className="text-xl font-bold mb-6">Featured Links</h3>
                         <ul className="space-y-4 text-sm text-gray-100">
@@ -61,14 +61,14 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Column 4: Newsletter */}
+                  
                     <div>
                         <h3 className="text-xl font-bold mb-4">Subscribe Our Newslater</h3>
                         <p className="text-sm text-gray-100 mb-6">
                             Get Our Latest Update & New Offers Sales Discount
                         </p>
 
-                        {/* Social Icons */}
+                        
                         <div className="flex gap-4 mb-6">
                             <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
                                 <Facebook size={16} />
@@ -79,13 +79,13 @@ const Footer = () => {
                             <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
                                 <Youtube size={16} />
                             </a>
-                            {/* Generic icon for pinterest since lucide doesn't have it explicitly or using lucide generic */}
+                            
                             <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
                                 <div className="text-xs font-bold">P</div>
                             </a>
                         </div>
 
-                        {/* Newsletter Input */}
+                        
                         <div className="relative">
                             <input
                                 type="email"
@@ -100,10 +100,10 @@ const Footer = () => {
 
                 </div>
 
-                {/* Divider */}
+                
                 <div className="border-t border-dashed border-white/30 w-full mb-8"></div>
 
-                {/* Copyright */}
+                
                 <div className="text-center text-xs font-medium tracking-widest uppercase text-white/80">
                     ALLRIGHT RESERVED - SOUVIK DEY
                 </div>

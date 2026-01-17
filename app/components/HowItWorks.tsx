@@ -9,28 +9,28 @@ const HowItWorks = () => {
             number: "01",
             title: "First Choose Your Meals Plan",
             description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/howItWorks1.png", // Placeholder
+            image: "/howItWorks1.png", 
             active: false
         },
         {
             number: "02",
             title: "Customize Or Choose Your Menu",
             description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/howItWorks2.png", // Placeholder
+            image: "/howItWorks2.png", 
             active: false
         },
         {
             number: "03",
             title: "Place Your Order Choicing Menu",
             description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/howItWorks3.png", // Placeholder
-            active: true // Red badge
+            image: "/howItWorks3.png", 
+            active: true 
         },
         {
             number: "04",
             title: "Enjoy Our Fresh Delivery Food",
             description: "Lorem ipsum dolor sit amet consectetur.",
-            image: "/howItWorks4.png", // Placeholder
+            image: "/howItWorks4.png", 
             active: false
         }
     ];
@@ -38,7 +38,7 @@ const HowItWorks = () => {
     return (
         <section className="bg-white py-20 relative overflow-hidden pb-30">
 
-            {/* Background Decoration Lines - Simplified representation */}
+            
             <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
                 <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
                     <path d="M0,0 Q50,50 100,0" stroke="orange" fill="none" vectorEffect="non-scaling-stroke" />
@@ -68,17 +68,17 @@ const HowItWorks = () => {
                     {steps.map((step, index) => (
                         <div key={index} className="relative group mt-12">
 
-                            {/* Number Badge - Floating at top */}
+                            
                             <div className={`absolute -top-10 left-1/2 transform -translate-x-1/2 w-20 h-20 flex items-center justify-center rounded-[1.5rem] z-30 shadow-xl ${step.active ? 'bg-[#D90000]' : 'bg-[#EFEEE5]'} `}>
                                 <span className={`text-2xl font-bold ${step.active ? 'text-white' : 'text-[#B0B0B0]'}`}>
                                     {step.number}.
                                 </span>
                             </div>
 
-                            {/* Main Card Container */}
+                            
                             <div className="relative h-[350px] w-full rounded-[3rem] shadow-none">
 
-                                {/* Image Container (Clipped) */}
+                                
                                 <div className="absolute inset-0 rounded-[3rem] overflow-hidden z-0">
                                     <div className="w-full h-full bg-[#EFEEE5] relative">
                                         <Image
@@ -90,7 +90,7 @@ const HowItWorks = () => {
                                     </div>
                                 </div>
 
-                                {/* Content Overlay - Floating (Unclipped) */}
+                                
                                 <div className="absolute -bottom-20 left-4 right-4 z-20">
                                     <div className="bg-[#439F48] rounded-[2rem] p-6 text-center text-white transition-transform group-hover:-translate-y-2 flex flex-col items-center justify-center min-h-[160px]">
                                         <h3 className="font-bold text-lg mb-2 leading-tight">

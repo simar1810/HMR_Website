@@ -80,7 +80,7 @@ const CleanFood = () => {
                     </p>
                 </div>
 
-                {/* Scrollable Container */}
+                
                 <div
                     ref={scrollRef}
                     className="flex gap-6 overflow-x-auto pb-12 snap-x snap-mandatory scrollbar-hide px-4"
@@ -99,23 +99,23 @@ const CleanFood = () => {
                                     />
                                 </div>
 
-                                {/* Floating Info Card */}
+                               
                                 <div className="absolute bottom-6 left-6 right-6 bg-white rounded-2xl p-4 shadow-lg flex items-center gap-4">
                                     <div className="bg-gray-100 p-2 rounded-full shrink-0">
                                         {item.icon}
                                     </div>
                                     <div className="w-full">
                                         <h4 className="font-bold text-gray-900 text-sm mb-2">{item.title}</h4>
-                                        {/* Fake Progress Bars for visualization */}
+                                        
                                         <div className="mt-3">
-                                            {/* Bar Segments */}
+                                           
                                             <div className="flex w-full h-2 rounded-full overflow-hidden gap-1 mb-2">
                                                 <div className="bg-[#8B5CF6] w-[50%] rounded-l-full"></div>
                                                 <div className="bg-[#F59E0B] w-[40%]"></div>
                                                 <div className="bg-[#3B82F6] w-[20%] rounded-r-full"></div>
                                             </div>
 
-                                            {/* Labels */}
+                                         
                                             <div className="flex justify-between text-[10px] text-gray-500 font-medium px-0.5">
                                                 <div className="w-[50%] text-left pl-1">
                                                     <span className="text-gray-700">{item.nutrition.protein}</span> Protein

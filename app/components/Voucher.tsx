@@ -15,7 +15,7 @@ const Voucher = () => {
                     fill
                     className="object-cover"
                 />
-                {/* Gradient Overlays */}
+                
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="absolute inset-0 "></div>
             </div>
@@ -33,17 +33,17 @@ const Voucher = () => {
                     </div>
                 </div>
 
-                {/* Headline */}
+                
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 max-w-4xl mx-auto">
                     Get Your <span className="bg-[#419E4B] px-2">First Meal</span> - Claim Your <br /> 20% Off Voucher.
                 </h2>
 
-                {/* Description */}
+                
                 <p className="text-gray-200 max-w-2xl mx-auto mb-10 text-lg">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
                 </p>
 
-                {/* Input Form */}
+                
                 <div className="max-w-xl mx-auto bg-white rounded-full p-1.5 md:p-2 flex items-center shadow-2xl">
                     <input
                         type="email"

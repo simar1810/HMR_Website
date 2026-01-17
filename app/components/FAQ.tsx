@@ -90,7 +90,7 @@ const FAQ = () => {
                         ))}
                     </div>
 
-                    {/* Right Side: Images */}
+                    
                     <div className="relative h-[500px] hidden lg:flex gap-6 items-center">
                         <div className="w-1/2 h-[60%] relative rounded-[2.5rem] overflow-hidden ml-auto">
                             <Image

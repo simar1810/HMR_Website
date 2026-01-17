@@ -5,9 +5,7 @@ import Image from 'next/image';
 import { CheckSquare, Play, Leaf, Users, Truck, FileCheck } from 'lucide-react';
 
 const WhoWeAre = () => {
-    // Using state to track active feature if interactivity represents functionality, 
-    // though the design implies a specific static look. 
-    // For now, I'll hardcode the "active" style to the first item to match the design.
+    
     const [activeFeature] = useState(0);
 
     const features = [
@@ -21,10 +19,10 @@ const WhoWeAre = () => {
         <section className="bg-[#EFEEE5] py-20">
             <div className="container mx-auto px-4 md:px-8">
 
-                {/* Top Content Row */}
+                
                 <div className="grid md:grid-cols-2 gap-12 mb-12">
 
-                    {/* Left: Heading */}
+                    
                     <div>
                         <div className="flex items-center gap-2 mb-4">
                             <span className="w-2 h-2 rounded-full bg-red-600"></span>
@@ -35,7 +33,7 @@ const WhoWeAre = () => {
                         </h2>
                     </div>
 
-                    {/* Right: Description & Checks */}
+                    
                     <div className="flex flex-col justify-end">
                         <p className="text-gray-600 mb-6">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
@@ -54,10 +52,10 @@ const WhoWeAre = () => {
 
                 </div>
 
-                {/* Bottom Content Row */}
+                
                 <div className="grid md:grid-cols-3 gap-12 items-center">
 
-                    {/* Left: Feature List */}
+                    
                     <div className="space-y-4 col-span-1">
                         {features.map((feature, index) => (
                             <div
@@ -73,9 +71,9 @@ const WhoWeAre = () => {
                         ))}
                     </div>
 
-                    {/* Right: Video/Image Area */}
+                    
                     <div className="relative rounded-3xl overflow-hidden shadow-xl h-[400px] col-span-2">
-                        {/* Placeholder Image */}
+                        
                         <div className="w-full h-full bg-gray-300 relative">
                             <Image
                                 src="/who_we_are.png"

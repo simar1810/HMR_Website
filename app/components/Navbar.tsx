@@ -62,7 +62,7 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                {/* Mobile Menu Toggle */}
+                
                 <button
                     className="md:hidden text-gray-700 hover:text-red-600 focus:outline-none"
                     onClick={toggleMobileMenu}
@@ -71,7 +71,7 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
+            
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col py-4 px-4 bg-opacity-95 backdrop-blur-sm animate-in slide-in-from-top-5 duration-200">
                     <nav className="flex flex-col gap-4 text-base font-medium text-gray-700">

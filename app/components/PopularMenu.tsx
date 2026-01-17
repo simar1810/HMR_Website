@@ -100,20 +100,20 @@ const PopularMenu = () => {
                     ))}
                 </div>
 
-                {/* Menu Cards Grid */}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
                     {menuItems.map((item, index) => (
                         <div key={index} className="relative mt-12 group">
-                            {/* Card Background */}
+                            
                             <div className="backdrop-blur-md rounded-[2.5rem] border border-white/20 shadow-xl overflow-visible pt-56 pb-8 px-6 relative z-0 h-full">
-                                {/* Content */}
+                                
                                 <div className="text-white text-center">
                                     <h3 className="text-2xl font-bold mb-3">{item.name}</h3>
                                     <p className="text-sm text-white/80 mb-6 leading-relaxed">{item.description}</p>
 
-                                    {/* Nutrition Info */}
+                                    
                                     <div className="space-y-4 text-left">
-                                        {/* Top Row */}
+                                        
                                         <div className="flex justify-between items-center gap-2">
                                             <div className="flex items-center gap-2">
                                                 <div className="bg-transparent border border-[#439F48] p-0.5 rounded-sm">
@@ -129,10 +129,10 @@ const PopularMenu = () => {
                                             </div>
                                         </div>
 
-                                        {/* Divider */}
+                                        
                                         <div className="border-t border-dashed border-white/50 w-full"></div>
 
-                                        {/* Bottom Row */}
+                                        
                                         <div className="flex justify-between items-center gap-2">
                                             <div className="flex items-center gap-2">
                                                 <div className="bg-transparent border border-[#439F48] p-0.5 rounded-sm">
@@ -151,7 +151,7 @@ const PopularMenu = () => {
                                 </div>
                             </div>
 
-                            {/* Floating Image */}
+                            
                             <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-[90%] h-64 z-10 transition-transform group-hover:-translate-y-2">
                                 <div className="relative w-full h-full rounded-[2rem] overflow-hidden shadow-2xl">
                                     <Image
