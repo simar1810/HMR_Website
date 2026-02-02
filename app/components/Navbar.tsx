@@ -14,8 +14,8 @@ const Navbar = () => {
         { name: 'Home', href: '/', hasDropdown: false },
         { name: 'About', href: '/about', hasDropdown: true },
         { name: 'Services', href: '/services', hasDropdown: true },
-        { name: 'Menus', href: '/menus', hasDropdown: true },
-        { name: 'Pages', href: '/pages', hasDropdown: true },
+        { name: 'Plans', href: '/plans', hasDropdown: true },
+        { name: 'Contact Us', href: '/contact', hasDropdown: false },
     ];
 
     const isActive = (path: string) => pathname === path;
@@ -24,29 +24,36 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const isTransparentPage = pathname === '/about' || pathname === '/services';
+
     return (
-        <header className="w-full bg-white shadow-sm border-t-4 font-sans relative z-50 sticky top-0">
+        <header className={`w-full font-sans z-50 transition-all duration-300 ${isTransparentPage
+            ? 'absolute top-0 bg-transparent text-white border-none'
+            : 'relative bg-white shadow-sm border-t-4 text-gray-700 sticky top-0'
+            }`}>
             <div className="container mx-auto px-4 md:px-8 h-20 flex items-center justify-between">
 
                 {/* Logo Section */}
                 <div className="flex items-center gap-2">
                     <Image
-                        src="/logo.png"
+                        src={isTransparentPage ? "/footer_logo.png" : "/logo.png"}
                         alt="Healthy Minds Restaurant"
                         width={300}
                         height={100}
-                        className="h-16 w-auto object-contain"
+                        className="h-20 w-auto object-contain"
                         priority
                     />
                 </div>
 
                 {/* Desktop Navigation Links */}
-                <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <nav className={`hidden md:flex items-center gap-8 text-sm font-medium ${isTransparentPage ? 'text-white' : 'text-gray-700'}`}>
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className={`flex items-center gap-1 cursor-pointer transition-colors ${isActive(link.href) ? 'text-red-600' : 'hover:text-red-600'
+                            className={`flex items-center gap-1 cursor-pointer transition-colors ${isActive(link.href)
+                                ? 'text-red-600'
+                                : isTransparentPage ? 'text-white hover:text-red-500' : 'text-gray-700 hover:text-red-600'
                                 }`}
                         >
                             {link.name}
@@ -62,16 +69,16 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                
+
                 <button
-                    className="md:hidden text-gray-700 hover:text-red-600 focus:outline-none"
+                    className={`md:hidden focus:outline-none ${isTransparentPage ? 'text-white hover:text-red-500' : 'text-gray-700 hover:text-red-600'}`}
                     onClick={toggleMobileMenu}
                 >
                     {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
 
-            
+
             {isMobileMenuOpen && (
                 <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t border-gray-100 flex flex-col py-4 px-4 bg-opacity-95 backdrop-blur-sm animate-in slide-in-from-top-5 duration-200">
                     <nav className="flex flex-col gap-4 text-base font-medium text-gray-700">
