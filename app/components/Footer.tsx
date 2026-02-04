@@ -2,110 +2,93 @@
 
 import React from 'react';
 import Image from 'next/image';
-import { Mail, Phone, Facebook, Twitter, Youtube, ArrowRight } from 'lucide-react';
+import { ChevronDown, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#D90000] text-white pt-20 pb-8">
+        <footer className="bg-white text-gray-800 pt-4 pb-2 border-t border-gray-100">
             <div className="container mx-auto px-4 md:px-8">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-12 lg:gap-24">
 
-                    
-                    <div className="space-y-6">
-                        <div className="relative w-32 h-16">
+                    {/* Left Section */}
+                    <div className="flex-1 space-y-10">
+                        {/* Logo */}
+                        <div className="relative w-16 h-16">
                             <Image
-                                src="/footer_logo.png"
+                                src="/logo.png" // Assuming reusing same logo, might need a colored version if original was white-only. Usually logos work on both or have variants. 
                                 alt="Healthy Minds Restaurant"
                                 fill
                                 className="object-contain object-left"
                             />
                         </div>
-                        <p className="text-sm leading-relaxed text-gray-100 max-w-xs">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
-                        </p>
-                        <div className="space-y-3">
-                            <div className="flex items-center gap-3">
-                                <Mail size={18} />
-                                <span className="text-sm">Hello@Email.co</span>
+
+                        {/* Navigation */}
+                        <nav className="flex flex-wrap gap-6 text-sm font-medium text-gray-600">
+                            <a href="#" className="hover:text-black transition-colors">Plans & Packages</a>
+                            <a href="#" className="hover:text-black transition-colors">Menu</a>
+                            <a href="#" className="hover:text-black transition-colors">The Cafe</a>
+                            <a href="#" className="hover:text-black transition-colors">Careers</a>
+                            <a href="#" className="hover:text-black transition-colors">Blog</a>
+                        </nav>
+
+                        {/* Selectors */}
+                        <div className="flex gap-4">
+                            <div className="relative">
+                                <button className="flex items-center gap-2 border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-600 hover:border-gray-300 bg-white shadow-sm min-w-[140px] justify-between">
+                                    <div className="flex items-center gap-2">
+                                        <span className="text-lg">🌍</span> {/* Placeholder for World Icon */}
+                                        <span>World</span>
+                                    </div>
+                                    <ChevronDown size={14} />
+                                </button>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <Phone size={18} />
-                                <span className="text-sm">+44 123 456 789</span>
+                            <div className="relative">
+                                <button className="flex items-center gap-2 border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-600 hover:border-gray-300 bg-white shadow-sm min-w-[140px] justify-between">
+                                    <span>English</span>
+                                    <ChevronDown size={14} />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Copyright */}
+                        <div className="flex flex-wrap gap-6 text-xs text-gray-400">
+                            <span>© 2026 HMR Inc. Privacy Policy</span>
+                            <a href="#" className="hover:text-gray-600">Terms & Conditions</a>
+                            <a href="#" className="hover:text-gray-600">Cookies</a>
+                        </div>
+                    </div>
+
+                    {/* Right Section */}
+                    <div className="flex flex-col items-start lg:items-end gap-10">
+
+                        {/* QR Code App Download */}
+                        <div className="flex items-center gap-4 bg-white border border-gray-100 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
+                            <div className="relative w-16 h-16 bg-gray-900 rounded-lg p-1">
+                                {/* Placeholder for QR Code */}
+                                <div className="w-full h-full bg-white p-1">
+                                    <div className="w-full h-full bg-[url('https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg')] bg-cover"></div>
+                                </div>
+                            </div>
+                            <div className="text-left">
+                                <p className="font-bold text-gray-900 text-sm mb-1">Scan the QR code</p>
+                                <p className="text-xs text-gray-500">to download app</p>
+                            </div>
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="flex items-center gap-6">
+                            <span className="font-bold text-gray-900 text-sm">Follow us</span>
+                            <div className="flex gap-4 text-gray-400">
+                                <a href="#" className="hover:text-black transition-colors"><Image src="/tiktok.svg" width={20} height={20} alt="TikTok" className="w-5 h-5 opacity-60 hover:opacity-100" /></a>
+                                {/* If icons aren't available as SVG files, I'll allow Lucide fallback or text logic, but user requested specific design. I will use standard lucide icons where possible closely matching or placeholders if needed. Based on image: Tiktok, Insta, X, Linkedin. */}
+                                {/* Let's use Lucide for standard ones and placeholder for others or FontAwesome logic if available, currently only Lucide. */}
+                                {/* Actually, let's use Lucide for robust code. */}
+                                <a href="#" className="hover:text-pink-600 transition-colors"><Instagram size={20} /></a>
+                                <a href="#" className="hover:text-black transition-colors"><Twitter size={20} /></a>
+                                <a href="#" className="hover:text-blue-700 transition-colors"><Linkedin size={20} /></a>
                             </div>
                         </div>
                     </div>
-
-                    
-                    <div>
-                        <h3 className="text-xl font-bold mb-6">Quick Links</h3>
-                        <ul className="space-y-4 text-sm text-gray-100">
-                            <li><a href="#" className="hover:text-white hover:underline">Homepage</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Homepage</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Homepage</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Homepage</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Homepage</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Contact Us</a></li>
-                        </ul>
-                    </div>
-
-                   
-                    <div>
-                        <h3 className="text-xl font-bold mb-6">Featured Links</h3>
-                        <ul className="space-y-4 text-sm text-gray-100">
-                            <li><a href="#" className="hover:text-white hover:underline">Customized Food</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Fully Diet Menus</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Healthy Clean Food</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Food Certificate</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Healthy Certificate</a></li>
-                            <li><a href="#" className="hover:text-white hover:underline">Refund Policy</a></li>
-                        </ul>
-                    </div>
-
-                  
-                    <div>
-                        <h3 className="text-xl font-bold mb-4">Subscribe Our Newslater</h3>
-                        <p className="text-sm text-gray-100 mb-6">
-                            Get Our Latest Update & New Offers Sales Discount
-                        </p>
-
-                        
-                        <div className="flex gap-4 mb-6">
-                            <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <Facebook size={16} />
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <Twitter size={16} />
-                            </a>
-                            <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <Youtube size={16} />
-                            </a>
-                            
-                            <a href="#" className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
-                                <div className="text-xs font-bold">P</div>
-                            </a>
-                        </div>
-
-                        
-                        <div className="relative">
-                            <input
-                                type="email"
-                                placeholder="Email"
-                                className="w-full bg-white/20 text-white placeholder-white/70 rounded-full py-4 px-6 pr-14 border-none outline-none focus:ring-2 focus:ring-white/40"
-                            />
-                            <button className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[#B90000] rounded-full flex items-center justify-center hover:bg-red-800 transition-colors shadow-lg">
-                                <ArrowRight size={18} />
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                
-                <div className="border-t border-dashed border-white/30 w-full mb-8"></div>
-
-                
-                <div className="text-center text-xs font-medium tracking-widest uppercase text-white/80">
-                    ALLRIGHT RESERVED - SOUVIK DEY
                 </div>
             </div>
         </footer>
